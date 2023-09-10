@@ -1,0 +1,241 @@
+@media (min-width:768px) {
+    header{
+        padding:clamp(2.5rem, 2.5vw, 3rem) clamp(2.4375rem, 2.45vw, 2.45rem);
+
+        > button.header-button{
+            padding: clamp(1rem, 1vw, 1.1rem) clamp(1.625rem, 1.65vw, 1.65rem);
+        }
+    }
+    section#home{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        row-gap: 0rem;
+
+        > .header-company-name-with-image{
+            padding: 0rem 0rem 0rem clamp(2.4375rem, 2.45vw, 2.45rem);
+
+            & .pre-releases-button{
+                > .section-home-btn{
+                    padding: clamp(1rem, 1vw, 1.1rem) clamp(1.625rem, 1.65vw, 1.65rem);
+                }
+            }
+        }
+
+        
+    }
+    .pattern-on-section-home{
+        display: none;
+    }
+    
+    .image-in-header-key {
+        position: relative; 
+        overflow: hidden;
+    }
+    
+    .image-in-header-key img {
+        position: relative;
+        right: -27%;
+        top: 0;
+    }
+
+    section#admin{
+        & .images-of-keyboards{
+            display: flex;
+            column-gap: clamp(1.5rem, 1.7rem,2rem);
+            padding:0rem clamp(2.4375rem, 2.45vw, 2.45rem);
+
+            & .first-keyb-inline{
+                position: relative;
+                left: 0;
+
+                & .image-phone-and-keyboard-style,
+                img.fall-back-img-for-phone-and-keyboard{
+                    border-radius: 1rem;
+                    background-color: var(--deep-orange-clr);
+                }
+
+                & .image-phone-and-keyboard-style,
+                img.fall-back-img-for-phone-and-keyboard::after{
+                    background-color: var(--deep-orange-clr);
+                }
+
+            }
+        }
+
+        > .describe-the-boards{
+            display: flex;
+            flex-direction: row;
+            column-gap: clamp(6.5rem, 7vw, 7.5rem);
+            padding:0rem clamp(2.4375rem, 2.45vw, 2.45rem);
+            align-items: center;
+            row-gap: 0rem;
+
+            & h2{
+                text-align: left;
+            }
+            > .paragraph-underneath-heading-h2{
+                text-align: left;
+                padding: 0rem;  
+            }
+        }
+
+    }
+
+    section#properties{
+        padding:0rem clamp(5rem, 5.45vw, 5.45rem)
+        0rem clamp(2.4375rem, 2.45vw, 2.45rem);
+        & .list-of-properties{
+            display:grid;
+            grid-template-columns: 0.5fr 0.5fr;
+            gap: clamp(4rem,4vw, 4.5rem);
+        }
+    }
+    .property-style{
+        display:flex ;
+        flex-direction: column;
+        padding: 0rem;
+        align-items: flex-start;
+
+        & .heading-and-paragraph{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+            > .property-heading{
+                text-align: left;
+            }
+            > .property-description{
+                text-align: left;
+            }
+
+        }
+        
+    }
+    
+}
+
+
+@media (min-width:1439px) {
+    header{
+        padding: clamp(3.4375rem, 3.5vw, 3.5rem) clamp(10.3125rem, 10.4vw, 10.4rem);
+
+        > button.header-button{
+            padding: clamp(1rem, 1vw, 1.1rem) clamp(1.625rem, 1.65vw, 1.65rem);
+        }
+    }
+    
+    section#home{
+        padding: 0rem 0rem 0rem clamp(10.3125rem, 10.4vw, 10.4rem);
+        display: flex;
+        flex-direction: row;
+        column-gap: clamp(10%, 15%, 20%);
+        /* row-gap: 0; */
+        > .header-company-name-with-image{
+            padding: 0rem;
+            
+            > h1{
+                font-size:clamp(3.5rem, 3.5vw, 3.6rem) ;
+            }
+            > .paragraph-underneath-heading{
+                font-size: clamp(1.125rem, 1.15vw, 1.15rem);
+            }
+            & .pre-releases-button{
+                display: flex;
+                align-items: center;
+                padding: 0rem clamp(20%, 23%,30%) 0rem 0rem;
+                > .section-home-btn{
+                    padding: clamp(1rem, 1vw, 1.1rem) clamp(1.625rem, 1.65vw, 1.65rem);
+                }
+            }
+        }
+    }
+    .pattern-on-section-home{
+        display: block;
+    }
+    .admin-pattern-background{
+        display: block;
+    }
+    .image-in-header-key {
+        position: relative; 
+        display: flex;
+        flex-direction: row;
+        /* overflow: hidden; */
+    }
+    .home-image-style{
+        border-radius: 1.5rem;
+    }
+    
+    .image-in-header-key picture img {
+        position: relative;
+        right: 0;
+    }
+
+    section#admin{
+        display: grid;
+        grid-template-columns: 0.68fr 0.3fr;
+        /* padding: 0rem clamp(10.3125rem, 10.4vw, 10.4rem) 
+        0rem 0rem; */
+        /* background-color: red; */
+        column-gap: clamp(1.5rem, 2vw, 2.5rem);
+        row-gap: 0rem;
+        
+        & .images-of-keyboards{
+            padding:0rem;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+
+            & .pattern-image-as-background-admin{
+                position: relative;
+                left: -1%;
+                overflow: hidden;
+            }
+            
+
+        }
+
+        & .describe-the-boards{
+            display: flex;
+            flex-direction: column;
+            /* background-color: red; */
+            justify-content: center;
+            align-items: center;
+            row-gap: clamp(1rem,1.3vw,1.5rem);
+            /* background-color: black; */
+
+            & h2{
+                text-align: left;
+                /* background-color: red; */
+            }
+
+            > .paragraph-underneath-heading-h2{
+                text-align: left;
+                padding: 0rem clamp(3rem, 3.5vw, 4rem) 0rem clamp(4rem, 5vw, 5.2rem);
+            }
+        }
+    }
+
+    section#properties{
+        margin-top: clamp(10rem, 10.5vw, 11rem);
+        padding:0rem clamp(10.3125rem, 10.4vw, 10.4rem);
+
+        & .list-of-properties{
+            display: grid;
+            grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+            column-gap: clamp(2rem, 2.5vw, 3rem);
+            align-items: center;
+            row-gap: 0rem;
+
+            > .property-style{
+                /* background-color: red; */
+                max-height: 30rem;
+            }
+        }
+    }
+    
+    
+}
+
+

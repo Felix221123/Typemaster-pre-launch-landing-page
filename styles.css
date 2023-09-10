@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+
+:root{
+    --fs:'Barlow', sans-serif;
+    --fw-extra-lght:200;
+    --fw-lght:300;
+    --fw-reg:400;
+    --fw-med:500;
+    --fw-semi-bold:600;
+    --fw-bold:700;
+    --fw-extra-bold:800;
+    --fw-black:900;
+
+    --deep-orange-clr:rgb(241, 103, 24);
+    --lght-orange-clr:rgb(255, 155, 98);
+    --deep-blue-clr:rgb(22, 37, 66);
+    --deep-grey-clr:rgb(123, 139, 173);
+    --lght-grey-clr:rgb(232, 239, 242);
+    --white-clr:rgb(255, 255, 255);
+
+    --uppercase:uppercase;
+    --fsize-properties-heading:1.5rem;
+    --fsize-properties-heading-height:1.75rem;
+    --fsize-properties-paragraph:1rem;
+    --fsize-properties-paragraph-height:1.625rem;
+
+}
+
+/* custom css reset */
+html, 
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+svg{
+    display: block;
+    max-width: 100%;
+}
+
+* , *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*{
+    font-size: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* mobile first workflow */
+
+main{
+    display: grid;
+    
+    row-gap: clamp(1rem, 1vw,.5rem);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:clamp(1.4375rem,1.5vw, 1.5rem) clamp(1.5rem, 1.5vw,1.6rem);
+
+    > button.header-button{
+        color: var(--deep-blue-clr);
+        background-color: var(--lght-grey-clr);
+
+        &:hover, :active{
+            background-color: var(--deep-blue-clr);
+            color: var(--white-clr);
+            transition:0.5s;
+        }
+    }
+}
+
+.preorder-btn{
+    font-family: var(--fs);
+    font-size: clamp(1rem, 1vw,1.1rem);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    line-height: 1.625rem;
+    border: none;
+    padding: clamp(.6875rem,0.7vw,0.7rem) clamp(0.875rem,0.9vw,0.9rem);        
+    border-radius: .5rem;
+
+    /* &:hover, :active{
+        background-color: var(--deep-blue-clr);
+        color: var(--white-clr);
+        transition:0.5s;
+    } */
+}
+
+
+
+
+section#home{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap:4rem ;
+
+
+    > .header-company-name-with-image{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap:clamp(2rem, 2.2vw, 2.2rem);
+        padding: 0rem clamp(1.5rem, 1.5vw,1.6rem);
+
+        > h1{
+            font-family: var(--fs);
+            font-weight: var(--fw-black);
+            line-height: 3rem;
+            color: var(--deep-blue-clr);
+            font-size: clamp(3rem, 3vw,3.1rem);
+            text-transform: uppercase;
+        }
+
+        > .paragraph-underneath-heading{
+            font-family: var(--fs);
+            font-size: clamp(1rem,1vw,1.1rem);
+            color: var(--deep-grey-clr);
+            line-height: 1.625rem;
+        }
+        > .pre-releases-button{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem clamp(1rem, 1.5vw,1.5rem) 0rem 0rem;
+
+            & .section-home-btn{
+                background-color: var(--deep-orange-clr);
+                color: var(--white-clr);
+                
+
+                &:hover, :active{
+                    background-color: var(--lght-orange-clr);
+                    transition:0.5s;
+                }
+
+            }
+
+            & .section-home-relaease-date{
+                color: var(--deep-grey-clr);
+                line-height: 1.625rem;
+                font-family: var(--fs);
+                text-transform: var(--uppercase);
+                font-size: clamp(1rem,1vw,1.1rem);
+                font-weight: var(--fw-bold);
+            }
+        }
+
+    }
+
+}
+
+
+.image-in-header-key {
+    position: relative; 
+    overflow: hidden;
+}
+
+.image-in-header-key img {
+    position: relative;
+    right: -6%;
+    top: 0;
+}
+
+.home-image-style{
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+
+.image-glass-and-keyboard-style{
+    border-radius: 1rem;
+    
+}
+
+.pattern-on-section-home{
+    display: none;
+}
+
+.admin-pattern-background{
+    display: none;
+}
+
+
+
+section#admin{
+    display: grid;
+    row-gap: clamp(5rem,5.5vw, 5.5rem);
+    margin-top: 0.5rem;
+
+    & .images-of-keyboards{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0rem clamp(1.5rem, 1.5vw,1.6rem) 0rem 0rem;
+        overflow: hidden;
+
+        & .first-keyb-inline{
+            position: relative;
+            left: -6.3%;
+            
+            > .fallback-img-for-phone-and-keyboard{
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                /* mix-blend-mode: multiply; */
+                background-color: rgba(241, 103, 24,1) !important;
+                z-index: 99;
+            }
+
+        }
+
+        & .second-keyb-inline{
+            > .image-glass-and-keyboard-style{
+                border-radius: 1rem;
+            }
+        }
+
+
+    }
+
+    & .describe-the-boards{
+        display: grid;
+        row-gap: clamp(1rem,1.3vw,1.5rem);
+        /* place-items: center; */
+
+        & h2{
+            text-align: center;
+            font-family: var(--fs);
+            font-weight: var(--fw-black);
+            line-height: 2.25rem;
+            font-size: clamp(2rem,2vw,2.2rem);
+            text-transform: var(--uppercase);
+            color: var(--deep-blue-clr);
+            vertical-align: middle;
+        }
+
+        > .paragraph-underneath-heading-h2{
+            font-family: var(--fs);
+            font-weight: var(--fw-med);
+            font-size: clamp(1rem, 1vw, 1.1rem);
+            text-align: center;
+            /* vertical-align: middle; */
+            padding: 0rem clamp(1.5rem, 1.5vw,1.6rem);
+            line-height: 1.625rem;
+            color: var(--deep-grey-clr);
+
+        }
+    }
+}
+
+section#properties{
+    margin-top: clamp(3rem, 3.5vw, 4rem);
+    & .list-of-properties{
+        display: grid;
+        /* flex-direction: column; */
+        row-gap: clamp(3.5rem,3.5vw, 4rem);
+        
+    }
+}
+
+/* .icon-container{
+    width: clamp(4.0625rem, 4.1vw, 4.1rem);
+    height:clamp(4.0625rem, 4.1vw, 4.1rem) ;
+    background-color: var(--deep-orange-clr);
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+} */
+
+.property-style{
+    padding: 0rem clamp(1.5rem, 1.5vw,1.6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* place-items: center; */
+    row-gap: clamp(2.7rem, 2.8vw,3rem);
+
+    & .icon-container{
+        width: clamp(4.0625rem, 4.1vw, 4.1rem);
+        height:clamp(4.0625rem, 4.1vw, 4.1rem) ;
+        background-color: var(--deep-orange-clr);
+        display: grid;
+        place-items: center;
+        border-radius: 1rem;
+    }
+
+    & .heading-and-paragraph{
+        display: grid;
+        row-gap: clamp(1.5rem, 1.6vw,2rem);
+        place-items: center;
+
+        > .property-heading{
+            font-family: var(--fs);
+            font-size: clamp(1.5rem, 1.5vw, 1.6rem);
+            text-align: center;
+            line-height: var(--fsize-properties-heading-height);
+            text-transform: var(--uppercase);
+            font-weight: var(--fw-black);
+            color: var(--deep-blue-clr);
+        }
+
+        > .property-description{
+            font-family: var(--fs);
+            font-size: clamp(1rem, 1vw, 1.1rem);
+            text-align: center;
+            line-height: var(--fsize-properties-paragraph-height);
+            color: var(--deep-grey-clr);
+        }
+    }
+}
+
+footer{
+    margin-top: clamp(5rem, 5.5vw, 6rem);
+    margin-bottom: clamp(3rem , 3.5vw, 4rem);
+    text-align: center;
+    font-family: var(--fs);
+    font-weight: var(--fw-med);
+    font-size: clamp(1rem , 1vw, 1.1rem);
+    color: var(--deep-grey-clr);
+
+}
+
+.diff-style{
+    font-weight: var(--fw-extra-bold);
+}
